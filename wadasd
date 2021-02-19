@@ -1,0 +1,43 @@
+interface Iskola
+    {
+        void Tanul();
+    }
+    interface IOsztalyok : Iskola
+    {
+        void Felel();
+    }
+
+    interface I11A : IOsztalyok
+    {
+        void Hallgat();
+    }
+
+    class Tanulo : I11A
+    {
+        public void Tanul()
+        {
+        Console.WriteLine("Nem tanul a diák");
+        }
+
+        public void Felel()
+        {
+            Console.WriteLine("Nem felel a diák");
+        }
+
+        public void Hallgat()
+        {
+            Console.WriteLine("A kurva anyád");
+        }
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Tanulo t = new Tanulo();
+            t.Tanul();
+            t.Felel();
+            t.Hallgat();
+            Console.ReadKey();
+        }
+    }
